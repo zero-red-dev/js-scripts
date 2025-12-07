@@ -33,6 +33,7 @@ import {
   readFileSync,
 } from "fs"
 import { execSync } from "child_process"
+import path from "path"
 
 
 export const pathExists = (path) => existsSync(path)
@@ -55,12 +56,12 @@ if (!pathExists(packageJsonPath)) {
   process.exit(1);
 }
 
-const packageJsonStr = readFile(
-  /package\.json$/.test(packageJsonPath) ?
-    packageJsonPath
-    :
-    packageJsonPath + 'package.json'
-)
+const packageJsonFile = packageJsonPath.endsWith('package.json')
+  ? packageJsonPath
+  : path.join(packageJsonPath, 'package.json');
+
+const packageJsonStr = readFile(packageJsonFile);
+
 const packageJson = JSON.parse(packageJsonStr)
 
 if (packageJson.dependencies) {

@@ -19,7 +19,7 @@ __Warning__: This can introduce breaking changes. Use with caution!
 
 ### 🚀 Quick Start
 ```Bash
-curl -fsSL https://raw.githubusercontent.com/zero-red-dev/js-scripts/refs/heads/zero/yarn-up.js | bash -s <PathToPackage.json>
+curl -fsSL https://raw.githubusercontent.com/zero-red-dev/js-scripts/refs/heads/zero/yarn-up.js | node - <PathToPackage.json>
 ```
 
 #### 🔧 Requirements
