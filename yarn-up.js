@@ -64,6 +64,9 @@ const packageJsonStr = readFile(packageJsonFile);
 
 const packageJson = JSON.parse(packageJsonStr)
 
+cmd(`yarn set version berry`)
+cmd(`yarn config set nodeLinker node-modules`)
+
 if (packageJson.dependencies) {
   const deps = Object.keys(packageJson.dependencies).join(" ")
   cmd(`yarn add ${deps}`)

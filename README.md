@@ -24,7 +24,7 @@ curl -fsSL https://raw.githubusercontent.com/zero-red-dev/js-scripts/refs/heads/
 
 #### 🔧 Requirements
 Node.js 14+
-Yarn v4+ (for __yarn-up.js__)
+Yarn
 Works on macOS, Linux, and Windows (with Git Bash/WSL)
 
 
